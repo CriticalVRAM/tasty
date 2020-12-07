@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "ACAA,AAAA,IAAI,AAAC,CACH,gBAAgB,CAAE,IAAI,CACvB",
+    "mappings": "ACGG,AAAD,UAAO,AAAC,CACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACb,AAEH,AAAA,KAAK,AAAC,CACJ,WAAW,CAAE,IAAI,CAOlB,AANE,AAAD,SAAK,AAAC,CACJ,gBAAgB,CAAE,uBAAuB,CACzC,mBAAmB,CAAE,MAAM,CAC3B,eAAe,CAAE,KAAK,CACtB,qBAAqB,CAAE,KAAK,CAC7B",
     "sources": [
         "../../src/scss/main.scss",
         "../../src/scss/_base.scss",
-        "../../src/scss/_nav.scss"
+        "../../src/scss/_nav.scss",
+        "../../src/scss/_main.scss"
     ],
     "names": [],
     "file": "main.css"

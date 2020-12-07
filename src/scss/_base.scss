@@ -1,3 +1,17 @@
-body {
-  background-color: #222;
+$color: #ff5500;
+
+.nav {
+  &__logo {
+    width: 75px;
+    height: auto;
+  }
+}
+.main {
+  padding-top: 70px;
+  &__bg {
+    background-image: url(../img/h1_hero.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }

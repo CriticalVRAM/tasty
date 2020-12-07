@@ -2,7 +2,7 @@
   "name": "web-prog-site",
   "version": "1.0.0",
   "description": "",
-  "main": "./docs/js/script.js",
+  "main": "./docs/js/main.js",
   "directories": {
     "doc": "docs"
   },
