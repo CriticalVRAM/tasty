@@ -1,5 +1,15 @@
 $color: #ff5500;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
 .nav {
   &__logo {
     width: 75px;
@@ -7,7 +17,10 @@ $color: #ff5500;
   }
 }
 .main {
-  padding-top: 70px;
+  &__slick {
+    max-width: 95%;
+    width: 700px;
+  }
   &__bg {
     background-image: url(../img/h1_hero.png);
     background-position: center;

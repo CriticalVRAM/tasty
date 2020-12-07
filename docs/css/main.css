@@ -1,2 +1,2 @@
-.nav__logo{width:75px;height:auto}.main{padding-top:70px}.main__bg{background-image:url(../img/h1_hero.png);background-position:center;background-size:cover;background-attachment:fixed}
+*{margin:0;padding:0}body{min-height:100vh;padding-top:70px}.nav__logo{width:75px;height:auto}.main__slick{max-width:95%;width:700px}.main__bg{background-image:url(../img/h1_hero.png);background-position:center;background-size:cover;background-attachment:fixed}
 /*# sourceMappingURL=main.css.map */
