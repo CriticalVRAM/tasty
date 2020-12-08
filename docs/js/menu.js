@@ -1,4 +1,34 @@
 let menuContent = document.querySelector(".menu__content");
+let vegToggle = false;
+let lastType;
+document.querySelector("#starter").addEventListener("click", drawMenu);
+document.querySelector("#main").addEventListener("click", drawMenu);
+document.querySelector("#desert").addEventListener("click", drawMenu);
+document.querySelector("#veg").addEventListener("click", toogleVeg);
+
+function toogleVeg(e) {
+  vegToggle = !vegToggle;
+  drawMenu(e);
+}
+
+function drawMenu(e) {
+  let buttonClicked = e.target.id;
+  menuContent.innerHTML = "";
+  for (let i = 0; i < data.length; i++) {
+    let newDishType = data[i].split(" ")[1];
+    let newDishVeg = data[i].split(" ")[2];
+    if (buttonClicked != "veg") {
+      if (newDishType != buttonClicked) continue;
+    } else {
+      if (newDishType != lastType) continue;
+    }
+    if (vegToggle) {
+      if (newDishVeg != vegToggle) continue;
+    }
+    menuContent.appendChild(createDish(i));
+  }
+  if (buttonClicked != "veg") lastType = buttonClicked;
+}
 
 let data = [
   "pasta main 1",
@@ -29,7 +59,7 @@ function createDish(i) {
         </div>
     </div>
     `;
-  let newCard = document.createElement("div");
-  newCard.innerHTML = newDishMarkup;
-  return newCard;
+  let newDish = document.createElement("div");
+  newDish.innerHTML = newDishMarkup;
+  return newDish;
 }

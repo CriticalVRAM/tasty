@@ -1,4 +1,10 @@
 $color: #ff5500;
+@mixin bg {
+  background-image: url(../img/h1_hero.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 * {
   margin: 0;
@@ -22,10 +28,7 @@ body {
     width: 700px;
   }
   &__bg {
-    background-image: url(../img/h1_hero.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    @include bg;
   }
 }
 
@@ -37,6 +40,9 @@ body {
   &__title {
     margin-bottom: 0;
     text-transform: capitalize;
+  }
+  &__body {
+    @include bg;
   }
 }
 .card-img-top {
