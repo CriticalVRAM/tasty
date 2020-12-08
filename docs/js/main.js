@@ -5,8 +5,8 @@ let navMarkup = `
 document.getElementById("nav").innerHTML = navMarkup;
 
 // TODO: Find data and images for menu.
-// TODO: Odgledati jQueiry predavanje.
 // TODO: Podesti se bootstrap grid system
+// TODO: Odgledati jQueiry predavanje.
 // TODO: Check what documenataion means in this case.
 
 /*
