@@ -1,18 +1,35 @@
 let menuContent = document.querySelector(".menu__content");
-let tempMarkup = `
-<div class="card menu__card" style="width: 18rem">
-<img src="img/slick1.jpg" class="card-img-top" alt="image" />
-<div class="card-body">
-  <h5 class="card-title">Card title</h5>
-  <p class="card-text">
-    Some quick example text to build on the card title and make up the bulk of the card's content.
-  </p>
-</div>
-</div>
-`;
-for (let i = 0; i < 10; i++) {
-  let temp = document.createElement("div");
-  temp.classList.add("col");
-  temp.innerHTML = tempMarkup;
-  menuContent.appendChild(temp);
+
+let data = [
+  "pasta main 1",
+  "burger main 0",
+  "chicken main 0",
+  "fish main 0",
+  "pizza main 0",
+  "dumplings starter 0",
+  "salad starer 1",
+  "corn starter 1",
+  "pancake desert 1",
+  "pudding desert 0",
+];
+
+for (let i = 0; i < data.length; i++) {
+  menuContent.appendChild(createDish(i));
+}
+
+function createDish(i) {
+  let splitDataString = data[i].split(" ");
+  let name = splitDataString[0];
+  let imgSrc = `img/cards/${splitDataString[0]}.jpg`;
+  let newDishMarkup = `
+    <div class="card menu__card">
+        <img src="${imgSrc}" class="card-img-top" alt="image" />
+        <div class="card-body">
+            <h5 class="card-title menu__title">${name}</h5>
+        </div>
+    </div>
+    `;
+  let newCard = document.createElement("div");
+  newCard.innerHTML = newDishMarkup;
+  return newCard;
 }
