@@ -56,10 +56,27 @@ function createDish(i) {
         <img src="${imgSrc}" class="card-img-top" alt="image" />
         <div class="card-body">
             <h5 class="card-title menu__title">${name}</h5>
+            <p class="card-text">${generateDesc(name)}</p>
         </div>
     </div>
     `;
   let newDish = document.createElement("div");
   newDish.innerHTML = newDishMarkup;
   return newDish;
+}
+
+function generateDesc(name) {
+  let descriptions = [
+    `This meal is one of our specialties. It is very tasty and nutritious. It is sure to leave you with a full belly and a happy face.`,
+    `The ${name} dish is one of our most popular dishes. And with good reason. The combination of high-quality ingredients and masterful technique is sure to please.`,
+    `The ${name} dish is one of our award nominated dishes. Nominated by our lovely customers for one of their favorite dishes.`,
+    `A modern classic. The ${name} dish is well known, even in the world perhaps. This is no surprise considering its world class quality.`,
+  ];
+  return descriptions[getRandomInt(0, 3)];
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }

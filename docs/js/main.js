@@ -4,14 +4,10 @@ let navMarkup = `
 `;
 document.getElementById("nav").innerHTML = navMarkup;
 
-// TODO: Find data and images for menu.
-// TODO: Podesti se bootstrap grid system
 // TODO: Odgledati jQueiry predavanje.
 // TODO: Check what documenataion means in this case.
 
 /*
 SEO Checklist
-Book Tabel (Native JS i Regex)
-Menu (dynamic)
 jQuery animacije i mozda neke druge stvari
 */
