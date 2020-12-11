@@ -47,13 +47,19 @@
           <div class="col">
             <div class="form-group">
               <label for="date">Reservation Date: </label>
-              <input class="form-control" id="date" type="input" />
+              <input placeholder="ex: 17-09-2019" class="form-control" id="date" type="input" />
+              <small id="date-invalid" class="from-text text-danger d-none">
+                Invalid date format or date. Date format: dd-mm-yyyy.
+              </small>
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label for="time">Arrival Time: </label>
-              <input class="form-control" id="time" type="input" />
+              <input placeholder="ex: 19:35" class="form-control" id="time" type="input" />
+              <small id="time-invalid" class="from-text text-danger d-none">
+                Invalid time format. Time format: hh:mm.
+              </small>
             </div>
           </div>
         </div>
