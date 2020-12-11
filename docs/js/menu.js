@@ -35,12 +35,19 @@ let data = [
   "burger main 0",
   "chicken main 0",
   "fish main 0",
-  "pizza main 0",
+  "pizza main 1",
   "dumplings starter 0",
   "salad starer 1",
   "corn starter 1",
   "pancake desert 1",
   "pudding desert 0",
+  "beef main 0",
+  "bread starter 1",
+  "crepe desert 0",
+  "cupcake desert 0",
+  "doughnut desert 1",
+  "lamb main 0",
+  "shrimp main 0",
 ];
 
 for (let i = 0; i < data.length; i++) {

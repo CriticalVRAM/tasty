@@ -61,3 +61,14 @@ body {
 .booking-bg {
   @include bg;
 }
+///////////////////////////////////////////////////////////////////////////////
+//* About CSS
+.about {
+  &__img {
+    width: 500px;
+    border: 3px solid $color;
+    @media only screen and (max-width: 990px) {
+      width: 350px;
+    }
+  }
+}
