@@ -19,23 +19,24 @@
     <div class="container mt-5">
       <h1 class="text-center">Book Table</h1>
       <!-- start of form -->
-      <form class="form" action="booking.php" method="get">
+      <form class="form" action="booking.php" method="get" novalidate>
         <!-- cilent info -->
-        <div class="form-group">
+        <div class="form-group position-relative">
           <label for="fullName">Full Name: </label>
-          <input required placeholder="ex: Asuka Langley" class="form-control" id="fullName" type="text" />
-          <small class="form-text text-muted">
+          <input placeholder="ex: Asuka Langley" class="form-control" id="fullName" type="text" />
+          <small class="form-text text-muted d-none">
             Full name must be two uppercase words with no numbers or symbols.
           </small>
+          <div class="invalid-tooltip">Full name must be two uppercase words with no numbers or symbols.</div>
         </div>
         <div class="form-group">
           <label for="email">Email: </label>
-          <input required placeholder="ex: johnson24@gmail.com" class="form-control" id="email" type="email" />
+          <input placeholder="ex: johnson24@gmail.com" class="form-control" id="email" type="email" />
           <small class="form-text text-muted"> Email must be a valid email address. </small>
         </div>
         <div class="form-group">
           <label for="phone">Phone number: </label>
-          <input required placeholder="ex: 066454676" class="form-control" id="phone" type="tel" />
+          <input placeholder="ex: 066454676" class="form-control" id="phone" type="tel" />
           <small class="form-text text-muted"> Phone number must contain at least 8 digits. </small>
         </div>
         <!-- reservation date -->
@@ -43,13 +44,13 @@
           <div class="col">
             <div class="form-group">
               <label for="date">Reservation Date: </label>
-              <input required class="form-control" id="date" type="date" />
+              <input class="form-control" id="date" type="date" />
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label for="time">Arrival Time: </label>
-              <input required class="form-control" id="time" type="time" />
+              <input class="form-control" id="time" type="time" />
             </div>
           </div>
         </div>
@@ -67,7 +68,7 @@
           <div class="col">
             <div class="form-group">
               <label for="people">No. of People: </label>
-              <input required placeholder="ex: 3" class="form-control" id="people" type="number" />
+              <input placeholder="ex: 3" class="form-control" id="people" type="number" />
               <small class="form-text text-muted"> The minimum is 2 and the maximum is 12. </small>
             </div>
           </div>
