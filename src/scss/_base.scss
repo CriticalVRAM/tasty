@@ -1,3 +1,4 @@
+//* Color var and bacground image mixin
 $color: #ff5500;
 @mixin bg {
   background-image: url(../img/h1_hero.png);
@@ -6,22 +7,25 @@ $color: #ff5500;
   background-attachment: fixed;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+//* Global CSS
 * {
   margin: 0;
   padding: 0;
 }
-
 body {
   min-height: 100vh;
   padding-top: 70px;
 }
-
 .nav {
   &__logo {
     width: 75px;
     height: auto;
   }
 }
+
+///////////////////////////////////////////////////////////////////////////////
+//* Index/Home CSS
 .main {
   &__slick {
     max-width: 95%;
@@ -32,6 +36,8 @@ body {
   }
 }
 
+///////////////////////////////////////////////////////////////////////////////
+//* Menu CSS
 .menu {
   &__card {
     width: 300px;
@@ -48,4 +54,10 @@ body {
 .card-img-top {
   height: 30vh;
   object-fit: cover;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//* Booking CSS
+.booking-bg {
+  @include bg;
 }

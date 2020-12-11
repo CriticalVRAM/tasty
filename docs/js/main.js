@@ -5,7 +5,6 @@ let navMarkup = `
 document.getElementById("nav").innerHTML = navMarkup;
 
 // TODO: Odgledati jQueiry predavanje (jQuery animacije)
-// TODO: Odgledaiti validation predavanje i implementirati
 // TODO: Dodaj about i docs
 // TODO: Dodaj jos obroka i tekst
 // TODO: SEO Checklist
