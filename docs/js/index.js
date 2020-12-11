@@ -14,6 +14,3 @@ function createImage(i) {
 $(".main__slick").slick({
   arrows: false,
 });
-///////////////////////////////////////////////////////////////////////////////
-//* jQuery Animations
-$(document).ready(() => $("#hero-text").fadeIn());
