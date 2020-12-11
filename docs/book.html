@@ -65,30 +65,24 @@
         </div>
         <hr />
         <!-- reservation info -->
-        <div class="form-group">
-          <label for="table">Table Type: </label>
-          <select name="table" id="table" class="form-control">
-            <option value="general">General</option>
-            <option value="garden">Garden</option>
-            <option value="rooftop">Rooftop</option>
-          </select>
-        </div>
+
         <div class="form-row">
           <div class="col">
             <div class="form-group">
               <label for="people">No. of People: </label>
               <input placeholder="ex: 3" class="form-control" id="people" type="number" />
-              <small class="form-text text-muted"> The minimum is 2 and the maximum is 12. </small>
+              <small id="people-invalid" class="form-text text-danger d-none">
+                The minimum is 2 people and the maximum is 12 people.
+              </small>
             </div>
           </div>
           <div class="col">
             <div class="form-group">
-              <label for="meals">Number of Meals: </label>
-              <select name="meals" id="meals" class="form-control">
-                <option value="two">Two-course meal</option>
-                <option value="four">Four-course meal</option>
-                <option value="six">Six-course meal</option>
+              <label for="table">Table Type: </label>
+              <select name="table" id="table" class="form-control">
+                <option value="0">Select Table Type</option>
               </select>
+              <small id="table-invalid" class="from-text text-danger d-none"> Please select table type. </small>
             </div>
           </div>
         </div>

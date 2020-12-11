@@ -1,16 +1,34 @@
-let formIsValid = [false, false, false, false, false];
+//* Declare variables and eventListeners
+let formIsValid = [false, false, false, false, false, false, false];
 
+// cilent info
 let fullName = document.querySelector("#fullName");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
-let date = document.querySelector("#date");
-let time = document.querySelector("#time");
-
 fullName.addEventListener("blur", validateFullName);
 email.addEventListener("blur", validateEmail);
 phone.addEventListener("blur", validatePhone);
+// reservation date
+let date = document.querySelector("#date");
+let time = document.querySelector("#time");
 date.addEventListener("blur", validateDate);
 time.addEventListener("blur", validateTime);
+// reservation info
+let table = document.querySelector("#table");
+table.addEventListener("blur", validateTable);
+table.addEventListener("change", validateTable);
+let people = document.querySelector("#people");
+people.addEventListener("blur", validatePeople);
+
+///////////////////////////////////////////////////////////////////////////////
+//* Generate dropdown dynamically from data and declare the CSS function
+let tabelTypesData = ["Indoor", "Garden", "Rooftop"];
+tabelTypesData.forEach((tableType) => {
+  let newOption = document.createElement("option");
+  newOption.setAttribute("value", tableType);
+  newOption.textContent = tableType;
+  table.appendChild(newOption);
+});
 
 function validationCSSToggle(inputElement, tooltipElement, inputIsValid) {
   if (!inputIsValid) {
@@ -30,9 +48,10 @@ $(document).ready(function () {
   //! Call valdation functions if they have any value
   if (fullName.value) validateFullName();
   if (email.value) validateEmail();
-  if (date.value) validatePhone();
+  if (phone.value) validatePhone();
   if (date.value) validateDate();
-  if (date.value) validateTime();
+  if (time.value) validateTime();
+  if (people.value) validatePeople();
 });
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -87,6 +106,26 @@ function validateTime() {
     formIsValid[4] = true;
   }
 }
+function validateTable() {
+  let tableTooltip = document.querySelector("#table-invalid");
+  if (table.selectedIndex === 0) {
+    validationCSSToggle(table, tableTooltip, false);
+    formIsValid[5] = false;
+  } else {
+    validationCSSToggle(table, tableTooltip, true);
+    formIsValid[5] = true;
+  }
+}
+function validatePeople() {
+  let peopleTooltip = document.querySelector("#people-invalid");
+  if (people.value < 2 || people.value > 12) {
+    validationCSSToggle(people, peopleTooltip, false);
+    formIsValid[6] = false;
+  } else {
+    validationCSSToggle(people, peopleTooltip, true);
+    formIsValid[6] = true;
+  }
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //* Check if all inputs are valid when button is clicked
@@ -101,6 +140,9 @@ function validateForm() {
     validatePhone();
     validateDate();
     validateTime();
+    validateTable();
+    validatePeople();
+    validateTable();
     text.classList.add("d-none");
   } else {
     text.classList.remove("d-none");
