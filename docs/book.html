@@ -31,25 +31,29 @@
         <div class="form-group">
           <label for="email">Email: </label>
           <input placeholder="ex: johnson24@gmail.com" class="form-control" id="email" type="email" />
-          <small class="form-text text-muted"> Email must be a valid email address. </small>
+          <small id="email-invalid" class="from-text text-danger d-none">
+            Email must contain "@"" and be a valid email address.
+          </small>
         </div>
         <div class="form-group">
           <label for="phone">Phone number: </label>
           <input placeholder="ex: 066454676" class="form-control" id="phone" type="tel" />
-          <small class="form-text text-muted"> Phone number must contain at least 8 digits. </small>
+          <small id="phone-invalid" class="from-text text-danger d-none">
+            Phone number must contain at least 8 digits.
+          </small>
         </div>
         <!-- reservation date -->
         <div class="form-row">
           <div class="col">
             <div class="form-group">
               <label for="date">Reservation Date: </label>
-              <input class="form-control" id="date" type="date" />
+              <input class="form-control" id="date" type="input" />
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label for="time">Arrival Time: </label>
-              <input class="form-control" id="time" type="time" />
+              <input class="form-control" id="time" type="input" />
             </div>
           </div>
         </div>
