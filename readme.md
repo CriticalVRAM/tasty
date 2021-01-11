@@ -1,1 +1,1 @@
-[Website Link](https://nani-sore-0.github.io/tasty/).
+[Website Link](https://nanibyte.github.io/tasty/).
