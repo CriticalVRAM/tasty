@@ -1,1 +1,1 @@
-[Website Link](https://nanibyte.github.io/tasty/).
+[Website Link](https://criticalvram.github.io/tasty/).
